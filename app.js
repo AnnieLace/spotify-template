@@ -17,10 +17,12 @@ var myCtrl = myApp.controller('myCtrl', function($scope, $http) {
 
   // Adds a given song to our favorites, so we can play it whenever we want
   $scope.addToFavorites = function(favTrack) {
+      $scope.favorites.push(favTrack);
   }
 
   // Removes a given track from our favorites list
   $scope.removeFromFavorites = function(removeTrack) {
+      $scope.favorites.splice(removeTrack, 1);
   }
 
   // Uses the $http service to make a request to spotify and get our songs

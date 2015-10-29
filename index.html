@@ -31,12 +31,18 @@
         <!-- Only show results when we have them -->
         <div ng-show="tracks">
           <!-- Show each track, and create and element for it -->
+          <ul>
+              <li ng-repeat = "track in tracks" >{{track.title}}</li>
+          </ul>
         </div>
       </div>
 
       <div class="col-md-6">
         <h2> Favorite Songs </h2>
         <!-- Show all of our favorite songs in the other column -->
+        <ul>
+            <li ng-repeat = "track in favorites">{{track.title}}</li>
+        </ul>
       </div>
     </div>
   </div>
